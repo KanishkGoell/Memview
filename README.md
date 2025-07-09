@@ -4,7 +4,7 @@
 
 **MemView** is a cross-platform desktop application that monitors real-time memory usage of running processes and provides an intuitive GUI for process management. Built with Python, it demonstrates strong system-level programming skills relevant to embedded systems and memory management.
 
-## 🎯 Why This Project is Perfect for Qualcomm Associate Engineer Role
+## 🎯 Technical Skills
 
 ### Technical Skills Demonstrated:
 - **Memory Organization**: Direct interaction with system memory via `psutil`
@@ -13,7 +13,7 @@
 - **Real-Time Monitoring**: Threaded auto-refresh and live data updates
 - **GUI Development**: Professional desktop application with `tkinter`
 
-### Qualcomm-Relevant Concepts:
+### Relevant Concepts:
 - Memory management and optimization
 - System resource monitoring
 - Process lifecycle management
