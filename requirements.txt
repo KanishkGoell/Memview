@@ -1,0 +1,136 @@
+# requirements.txt
+psutil>=5.8.0
+
+# setup.py (optional - for packaging)
+"""
+setup.py for MemView Application
+"""
+
+from setuptools import setup, find_packages
+
+setup(
+    name="memview",
+    version="1.0.0",
+    description="GUI-Based Memory Monitor & Process Killer",
+    author="Your Name",
+    author_email="your.email@example.com",
+    packages=find_packages(),
+    install_requires=[
+        "psutil>=5.8.0",
+    ],
+    python_requires=">=3.7",
+    entry_points={
+        'console_scripts': [
+            'memview=memview:main',
+        ],
+    },
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+)
+
+# .gitignore
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Installation script for macOS/Linux
+#!/bin/bash
+# install.sh
+
+echo "Installing MemView - Memory Monitor & Process Killer"
+echo "=================================================="
+
+# Check if Python 3 is installed
+if ! command -v python3 &> /dev/null; then
+    echo "Error: Python 3 is not installed. Please install Python 3.7 or higher."
+    exit 1
+fi
+
+# Check Python version
+python_version=$(python3 -c "import sys; print(f'{sys.version_info.major}.{sys.version_info.minor}')")
+echo "Python version: $python_version"
+
+# Create virtual environment
+echo "Creating virtual environment..."
+python3 -m venv venv
+source venv/bin/activate
+
+# Install dependencies
+echo "Installing dependencies..."
+pip install -r requirements.txt
+
+echo "Installation complete!"
+echo "To run the application:"
+echo "1. source venv/bin/activate"
+echo "2. python memview.py"
+
+# Installation script for Windows
+@echo off
+REM install.bat
+
+echo Installing MemView - Memory Monitor ^& Process Killer
+echo ==================================================
+
+REM Check if Python is installed
+python --version >nul 2>&1
+if %errorlevel% neq 0 (
+    echo Error: Python is not installed. Please install Python 3.7 or higher.
+    pause
+    exit /b 1
+)
+
+REM Create virtual environment
+echo Creating virtual environment...
+python -m venv venv
+call venv\Scripts\activate
+
+REM Install dependencies
+echo Installing dependencies...
+pip install -r requirements.txt
+
+echo Installation complete!
+echo To run the application:
+echo 1. venv\Scripts\activate
+echo 2. python memview.py
+pause
