@@ -4,6 +4,9 @@
 
 **MemView** is a cross-platform desktop application that monitors real-time memory usage of running processes and provides an intuitive GUI for process management. Built with Python, it demonstrates strong system-level programming skills relevant to embedded systems and memory management.
 
+![image](https://github.com/user-attachments/assets/a245cb37-f5e7-433e-ae2d-99400ca50fe0)
+
+
 ## 🎯 Technical Skills
 
 ### Technical Skills Demonstrated:
